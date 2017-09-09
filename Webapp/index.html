@@ -1,0 +1,55 @@
+<html>
+
+<head>
+	<style src="style/main.css"></style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+	<script>
+  		// Initialize Firebase
+  		var config = {
+    		apiKey: "AIzaSyA7KHJkcOde4QG6kmlDTM9Z2Rl5pNvzLyg",
+    		authDomain: "health-tracker-b4b4e.firebaseapp.com",
+    		databaseURL: "https://health-tracker-b4b4e.firebaseio.com",
+    		projectId: "health-tracker-b4b4e",
+    		storageBucket: "health-tracker-b4b4e.appspot.com",
+    		messagingSenderId: "751418443332"
+  		};
+  		firebase.initializeApp(config);
+  		var database = firebase.database();
+</script>
+
+</head>
+
+<body>
+
+<center>
+	<h1>DASHBOARD</h1>
+</center>
+
+<div>
+<button type="button" class="btn btn-primary">Add New Patient</button>
+
+<input type="text" id="search" placeholder="Search">
+</div>
+<table>
+	<tr>
+		<th>Username</th>
+		<th>Weekly Mood Average</th>
+		<th>Response Rate Average</th>
+		<th>Progress Chart</th>
+	</tr>
+	<tr>
+		<td>Allen Lu</td>
+		<td>4.3</td>
+		<td>4.3</td>
+		<td>N/a</td>
+	</tr>
+	<tr>
+		<td>Christopher Morris</td>
+		<td>4.5</td>
+		<td>4.2</td>
+		<td>n/a</td>
+	</tr>
+</table>
+</body>
+</html>
