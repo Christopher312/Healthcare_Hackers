@@ -33,16 +33,18 @@
   					var row = table.insertRow(1);
   					var moodCounts = [0,0,0,0,0,0];
   					var moodList = userSnapshot.val().mood_list;
-  					console.log(moodList);
+  					//console.log(moodList);
   					for(key in moodList) {
   						numRatings+=1;
-  						sum+=moodList[key].mood_rating;
+  						if(moodList[key].mood_rating!=NaN)
+  							sum+=moodList[key].mood_rating;
   						var moodsListed = moodList[key].moods_selected;
   						//console.log(moodSnapshot);
-  						console.log(moodsListed);
+  						if(moodsListed==undefined)
+  							continue;
   						var moodArray = moodsListed.split(",");
-  						console.log(moodArray);
-  						console.log(userSnapshot.val().mood_types.one)
+  						//console.log(moodArray);
+  						//console.log(userSnapshot.val().mood_types.one)
   						for(var i=0;i<moodArray.length;i++) {
   							if(moodArray[i]===userSnapshot.val().mood_types.one)
   								moodCounts[0]++;
@@ -58,7 +60,7 @@
   								moodCounts[5]++;
   						}
   					}
-  					console.log(moodCounts);
+  					//console.log(moodCounts);
   					var cell1=row.insertCell(0);
   					cell1.innerHTML = userSnapshot.key;
   					var cell2 = row.insertCell(1);
@@ -68,7 +70,7 @@
   						if(moodCounts[i]>moodCounts[max])
   							max=i;
   					}
-  					console.log(max);
+  					//console.log(max);
   					var mostCommonMood = "placehold";
   					if(max==0)
   						mostCommonMood = userSnapshot.val().mood_types.one;
