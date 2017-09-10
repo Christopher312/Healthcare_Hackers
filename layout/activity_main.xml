@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="ibotbuilders.healthcarehackers.MainActivity">
+    android:background="@drawable/background">
+
+
+    <TextView
+        android:text="Magnet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:layout_below="@+id/moodb1"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:typeface="serif"/>
+
+    <TextView
+        android:text="Mood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/moodb1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/colorPrimaryDark"
+        android:typeface="serif"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Notes"
+        android:id="@+id/Send"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:elevation="0dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/Mood"
+        android:layout_alignStart="@+id/Mood" />
+
+    <Button
+        android:onClick="activity_moodb"
+        android:text="Enter mood"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:id="@+id/Mood"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:layout_marginBottom="86dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        app:srcCompat="@drawable/profilepic"
+        android:id="@+id/profile"
+        android:layout_height="200dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="activity_profile" />
+
+</RelativeLayout>
