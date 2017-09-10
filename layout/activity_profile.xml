@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="ibotbuilders.healthcarehackers.profile"
+    android:background="@drawable/profileback">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <SeekBar
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="22dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="?attr/actionModeCloseDrawable"
+            android:id="@+id/profileMain"
+            android:layout_marginTop="20dp"
+            android:onClick="activity_main"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/seekBar"
+            android:layout_alignStart="@+id/seekBar" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/one"
+            android:layout_above="@+id/seekBar"
+            android:layout_toRightOf="@+id/profileMain"
+            android:layout_toEndOf="@+id/profileMain"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
+            android:id="@+id/level" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <Space
+                android:layout_width="400dp"
+                android:layout_height="300dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:text="Points"
+                    android:layout_width="126dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pointtext"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:layout_alignBaseline="@+id/goaltext"
+                    android:layout_alignBottom="@+id/goaltext"
+                    android:layout_alignRight="@+id/seekBar"
+                    android:layout_alignEnd="@+id/seekBar"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="cursive" />
+
+                <TextView
+                    android:text="Goal"
+                    android:layout_width="124dp"
+                    android:layout_height="51dp"
+                    android:id="@+id/goaltext"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:layout_marginBottom="109dp"
+                    android:layout_above="@+id/level"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="cursive" />
+
+                <TextView
+                    android:text="Total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/totaltext"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:layout_alignBaseline="@+id/goaltext"
+                    android:layout_alignBottom="@+id/goaltext"
+                    android:layout_alignLeft="@+id/points"
+                    android:layout_alignStart="@+id/points"
+                    android:fontFamily="cursive" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="138dp">
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/points"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:layout_below="@+id/goaltext"
+                    android:layout_alignLeft="@+id/seekBar"
+                    android:layout_alignStart="@+id/seekBar"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1.60" />
+
+                <TextView
+                    android:text="30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:id="@+id/goal"
+                    android:layout_weight="1.28"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="37dp"
+                    android:layout_height="64dp"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginStart="27dp"
+                    android:id="@+id/total"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:layout_alignBottom="@+id/goal"
+                    android:layout_alignLeft="@+id/pointtext"
+                    android:layout_alignStart="@+id/pointtext"
+                    android:layout_marginBottom="11dp"
+                    android:layout_weight="1.16" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

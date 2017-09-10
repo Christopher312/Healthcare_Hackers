@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="ibotbuilders.healthcarehackers.moodb"
+    android:background="@drawable/background2">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:weightSum="1"
+        android:layout_height="425dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="28dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.71">
+
+            <Button
+                android:layout_below="@+id/moodb1"
+                android:layout_toLeftOf="@+id/moodb2"
+                android:layout_toStartOf="@+id/moodb2"
+                android:layout_marginTop="29dp"
+                android:id="@+id/enButton"
+                android:layout_width="40dp"
+                android:layout_height="191dp" />
+
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="125dp"
+                app:srcCompat="@drawable/happy"
+                android:id="@+id/enImage"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:layout_height="125dp"
+                app:srcCompat="@drawable/sad"
+                android:id="@+id/sadImage"
+                android:layout_weight="1"
+                android:layout_width="100dp" />
+
+            <Button
+                android:id="@+id/sadButton"
+                android:layout_width="40dp"
+                android:layout_height="139dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="128dp">
+
+            <Button
+                android:id="@+id/unButton"
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="125dp"
+                app:srcCompat="@drawable/uncertain"
+                android:id="@+id/unImage"
+                android:layout_weight="1.00" />
+
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="125dp"
+                app:srcCompat="@drawable/anger"
+                android:id="@+id/angImage"
+                android:layout_weight="1.00" />
+
+            <Button
+                android:id="@+id/angButton"
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:layout_weight="0.25">
+
+            <Button
+                android:id="@+id/feButton"
+                android:layout_height="match_parent"
+                android:layout_width="40dp" />
+
+            <ImageButton
+                android:layout_height="125dp"
+                app:srcCompat="@drawable/fear"
+                android:id="@+id/feImage"
+                android:layout_weight="1"
+                android:layout_width="100dp" />
+
+            <ImageButton
+                app:srcCompat="@drawable/disgust"
+                android:id="@+id/disImage"
+                android:layout_weight="1"
+                android:layout_height="125dp"
+                android:layout_width="100dp" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:id="@+id/disButton" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_weight="0.32"
+            android:layout_height="30dp">
+
+            <Button
+                android:onClick="activity_moodslider"
+                android:text="Next"
+                android:layout_height="wrap_content"
+                android:id="@+id/next"
+                android:layout_width="match_parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:text="How are you"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/moodb1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="feeling right now?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/moodb2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:layout_below="@+id/moodb1"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="?attr/actionModeCloseDrawable"
+        android:id="@+id/moodbMain"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/moodb2"
+        android:layout_toStartOf="@+id/moodb2" />
+
+</RelativeLayout>
