@@ -1,7 +1,11 @@
 <html>
 
 <head>
-	<style src="style/main.css"></style>
+	<style>
+		#search {
+			float: right;
+		}
+		</style>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
 	<script>
@@ -16,6 +20,75 @@
   		};
   		firebase.initializeApp(config);
   		var database = firebase.database();
+  		var rootref = database.ref();
+  		rootref.once("value")
+  			.then(function(snapshot) {
+  				//console.log(snapshot)
+  				//console.log(snapshot.child("Allen Lu").val());
+  				
+  				snapshot.forEach(function(userSnapshot) {
+  					var sum=0;
+  					var numRatings=0;
+  					var table = document.getElementById("myTable");
+  					var row = table.insertRow(1);
+  					var moodCounts = [0,0,0,0,0,0];
+  					var moodList = userSnapshot.val().mood_list;
+  					console.log(moodList);
+  					for(key in moodList) {
+  						numRatings+=1;
+  						sum+=moodList[key].mood_rating;
+  						var moodsListed = moodList[key].moods_selected;
+  						//console.log(moodSnapshot);
+  						console.log(moodsListed);
+  						var moodArray = moodsListed.split(",");
+  						console.log(moodArray);
+  						console.log(userSnapshot.val().mood_types.one)
+  						for(var i=0;i<moodArray.length;i++) {
+  							if(moodArray[i]===userSnapshot.val().mood_types.one)
+  								moodCounts[0]++;
+  							if(moodArray[i]===userSnapshot.val().mood_types.two)
+  								moodCounts[1]++;
+  							if(moodArray[i]===userSnapshot.val().mood_types.three)
+  								moodCounts[2]++;
+  							if(moodArray[i]===userSnapshot.val().mood_types.four)
+  								moodCounts[3]++;
+  							if(moodArray[i]===userSnapshot.val().mood_types.five)
+  								moodCounts[4]++;
+  							if(moodArray[i]===userSnapshot.val().mood_types.six)
+  								moodCounts[5]++;
+  						}
+  					}
+  					console.log(moodCounts);
+  					var cell1=row.insertCell(0);
+  					cell1.innerHTML = userSnapshot.key;
+  					var cell2 = row.insertCell(1);
+  					cell2.innerHTML = (sum/numRatings);
+  					var max = 0;
+  					for(var i=0;i<6;i++) {
+  						if(moodCounts[i]>moodCounts[max])
+  							max=i;
+  					}
+  					console.log(max);
+  					var mostCommonMood = "placehold";
+  					if(max==0)
+  						mostCommonMood = userSnapshot.val().mood_types.one;
+  					if(max==1)
+  						mostCommonMood = userSnapshot.val().mood_types.two;
+  					if(max==2)
+  						mostCommonMood = userSnapshot.val().mood_types.three;
+  					if(max==3)
+  						mostCommonMood = userSnapshot.val().mood_types.four;
+  					if(max==4)
+  						mostCommonMood = userSnapshot.val().mood_types.five;
+  					if(max==5)
+  						mostCommonMood = userSnapshot.val().mood_types.six;
+  					var cell3 = row.insertCell(2);
+  					cell3.innerHTML = mostCommonMood;
+  					//console.log(sum/numRatings);
+  					//console.log(numRatings);
+  				});
+  				
+  			});
 </script>
 
 </head>
@@ -27,18 +100,18 @@
 </center>
 
 <div>
-<button type="button" class="btn btn-primary">Add New Patient</button>
+<a href="newuser.html" class="btn btn-primary">Add New Patient</a>
 
 <input type="text" id="search" placeholder="Search">
 </div>
-<table>
+<table id="myTable" border=10px cellpadding=20px>
 	<tr>
 		<th>Username</th>
 		<th>Weekly Mood Average</th>
-		<th>Response Rate Average</th>
-		<th>Progress Chart</th>
+		<th>Common Moods</th>
+		<!--th>Progress Chart</th-->
 	</tr>
-	<tr>
+	<!--tr>
 		<td>Allen Lu</td>
 		<td>4.3</td>
 		<td>4.3</td>
@@ -49,7 +122,7 @@
 		<td>4.5</td>
 		<td>4.2</td>
 		<td>n/a</td>
-	</tr>
+	</tr -->
 </table>
 </body>
 </html>

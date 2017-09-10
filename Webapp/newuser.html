@@ -1,0 +1,45 @@
+<html>
+
+
+<head>
+	<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+	<script>
+  		var config = {
+    		apiKey: "AIzaSyA7KHJkcOde4QG6kmlDTM9Z2Rl5pNvzLyg",
+    		authDomain: "health-tracker-b4b4e.firebaseapp.com",
+    		databaseURL: "https://health-tracker-b4b4e.firebaseio.com",
+    		projectId: "health-tracker-b4b4e",
+    		storageBucket: "health-tracker-b4b4e.appspot.com",
+    		messagingSenderId: "751418443332"
+  		};
+  		firebase.initializeApp(config);
+  		function putInDatabase() {
+  			var first = document.getElementById("myForm").elements["FirstName"];
+  			var last = document.getElementById("myForm").elements["FirstName"];
+  			firebase.database().ref('/' + first + " " + last).set({
+    			mood_list:{},
+    			mood_types:{"one":"Anger","two":"Disgust","three":"Surprise","four":"Joy","five":"Uncertain","six":"Sadness"}
+
+  			});
+  			console.log(":(");
+  		}
+	</script>
+</head>
+
+<body>
+
+<center>
+	<h1>DASHBOARD</h1>
+
+	<h2> Registration</h2>
+
+	<form id="myForm" onsubmit="putInDatabase();"> 
+	<input type="text" name="FirstName" placeholder="Patient First Name">
+	<input type="text" name="LastName" placeholder="Patient Last Name">
+	<input type="text" name="Gender" placeholder="Gender">
+	<input type="text" name="Birthdate" placeholder="Birthdate">
+	<input type="text" name="conditions" placeholder="Known Conditions">
+	<input type="submit" value="Submit">
+	</form>
+
+</center>
