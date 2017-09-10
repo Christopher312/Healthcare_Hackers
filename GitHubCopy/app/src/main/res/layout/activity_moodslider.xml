@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.buttoncolor.adamrichter.githubcopy.moodslider"
+    android:background="@drawable/moodslider">
+
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="55dp" />
+
+        <ImageButton
+            android:id="@+id/sliderMoodb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="87dp" />
+
+        <SeekBar
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="5" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="210dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="137dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="375dp"
+                android:layout_height="75dp"
+                android:layout_alignLeft="@+id/seekBar"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/seekBar"
+                android:layout_marginBottom="49dp"
+                android:ems="10"
+                android:hint="@string/edit_message"
+                android:inputType="textPersonName"
+                android:text="@string/button_send" />
+
+            <Space
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_weight="1"
+
+                android:onClick="sendMessage"
+                android:text="@string/button_send"
+                app:layout_anchorGravity="bottom|center_horizontal" />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

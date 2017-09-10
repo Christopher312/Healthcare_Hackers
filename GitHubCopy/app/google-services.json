@@ -1,0 +1,139 @@
+{
+  "project_info": {
+    "project_number": "751418443332",
+    "firebase_url": "https://health-tracker-b4b4e.firebaseio.com",
+    "project_id": "health-tracker-b4b4e",
+    "storage_bucket": "health-tracker-b4b4e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:751418443332:android:616ae934cdc5c21e",
+        "android_client_info": {
+          "package_name": "com.buttoncolor.adamrichter.textbox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "751418443332-hdroucp1rqc5mptepd760lie7eab296c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.buttoncolor.adamrichter.textbox",
+            "certificate_hash": "7a51095044ff4fd6d3573b5bc5ac4d8b33ce1491"
+          }
+        },
+        {
+          "client_id": "751418443332-63f7m5p9b69p265qvos8f830jc34ihhn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3unUz301Ac024Bf7EbrIA6kRC2ddQqtA"
+        },
+        {
+          "current_key": "AIzaSyDebXYiLtSIiA8fdKQNjDXKxIBVcWc1OFw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "751418443332-63f7m5p9b69p265qvos8f830jc34ihhn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:751418443332:android:36f40db882745ad0",
+        "android_client_info": {
+          "package_name": "ibotbuilders.healthcarehackers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "751418443332-63f7m5p9b69p265qvos8f830jc34ihhn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3unUz301Ac024Bf7EbrIA6kRC2ddQqtA"
+        },
+        {
+          "current_key": "AIzaSyDebXYiLtSIiA8fdKQNjDXKxIBVcWc1OFw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:751418443332:android:0e28172a8eaac2ab",
+        "android_client_info": {
+          "package_name": "com.buttoncolor.adamrichter.githubcopy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "751418443332-ppt2q6vmrl5h2uvgkumv6uv6ipmlcub2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.buttoncolor.adamrichter.githubcopy",
+            "certificate_hash": "7a51095044ff4fd6d3573b5bc5ac4d8b33ce1491"
+          }
+        },
+        {
+          "client_id": "751418443332-63f7m5p9b69p265qvos8f830jc34ihhn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3unUz301Ac024Bf7EbrIA6kRC2ddQqtA"
+        },
+        {
+          "current_key": "AIzaSyDebXYiLtSIiA8fdKQNjDXKxIBVcWc1OFw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "751418443332-63f7m5p9b69p265qvos8f830jc34ihhn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
