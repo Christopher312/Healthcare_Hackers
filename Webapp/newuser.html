@@ -12,34 +12,62 @@
     		storageBucket: "health-tracker-b4b4e.appspot.com",
     		messagingSenderId: "751418443332"
   		};
-  		firebase.initializeApp(config);
-  		function putInDatabase() {
-  			var first = document.getElementById("myForm").elements["FirstName"];
-  			var last = document.getElementById("myForm").elements["FirstName"];
-  			firebase.database().ref('/' + first + " " + last).set({
+  		
+  		/*firebase.database().ref('/CM').set({
+    			mood_list:{},
+    			mood_types:{"one":"Anger","two":"Disgust","three":"Surprise","four":"Joy","five":"Uncertain","six":"Sadness"}
+
+  			});*/
+  		/*function putInDatabase() {
+  			firebase.initializeApp(config);
+  			//alert("asdflafsd");
+  			var first = document.getElementById("myForm").elements["FirstName"].value;
+  			var last = document.getElementById("myForm").elements["FirstName"].value;
+  			//alert(last);
+  			firebase.database().ref('/jfkd').set({
     			mood_list:{},
     			mood_types:{"one":"Anger","two":"Disgust","three":"Surprise","four":"Joy","five":"Uncertain","six":"Sadness"}
 
   			});
   			console.log(":(");
-  		}
+  		}*/
 	</script>
 </head>
 
 <body>
 
+<a href="index.html">Home</a>
 <center>
 	<h1>DASHBOARD</h1>
 
 	<h2> Registration</h2>
 
-	<form id="myForm" onsubmit="putInDatabase();"> 
+	<script>
+		function putInDatabase() {
+
+  			firebase.initializeApp(config);
+  			alert("asdflafsd");
+  			var first = document.getElementById("myForm").elements["FirstName"].value;
+  			var last = document.getElementById("myForm").elements["FirstName"].value;
+  			alert(last);
+  			firebase.database().ref('/' + first + " " + last).set({
+    			mood_list:{},
+    			mood_types:{"one":"Anger","two":"Disgust","three":"Fear","four":"Joy","five":"Uncertain","six":"Sadness"}
+
+  			});
+  			console.log(":(");
+  			return true;
+  		}
+  		</script>
+
+	<form id="myForm"> 
 	<input type="text" name="FirstName" placeholder="Patient First Name">
 	<input type="text" name="LastName" placeholder="Patient Last Name">
 	<input type="text" name="Gender" placeholder="Gender">
 	<input type="text" name="Birthdate" placeholder="Birthdate">
 	<input type="text" name="conditions" placeholder="Known Conditions">
-	<input type="submit" value="Submit">
+	
 	</form>
+	<button type="button" onclick="putInDatabase()">Submit</button>
 
 </center>
